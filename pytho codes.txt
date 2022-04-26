@@ -1,0 +1,917 @@
+####################################################### If statements
+""" from random import randint
+num=randint(1,10)
+guess=eval(input('Enter a guessing number: '))
+if guess==num:
+    print('You got it!')
+else:
+    print('Sorry. The number is ',num)
+#############################################Example1
+grade=eval(input('Enter the grade of an exam '))
+if grade>=90 and grade <=100:
+    print('you have earned A')
+score=eval(input('Enter the score of an exam '))
+if 80<=score<90:
+    print('A-')
+    #########################################################################3
+grade=eval(input('Enter the grades'))
+if 90<=grade<=100:
+    print('A')
+if 80<=grade<90:
+    print('B')
+if 70<=grade<80:
+    print('C')
+if 60<=grade<70:
+    print('D')
+if grade<60:
+    print('F')
+#############################################################################4
+score=eval(input('Enter the grades'))
+if 90<=score<100:
+    print('A')
+elif score>=80:
+    print('B')
+elif score>=70:
+    print('C')
+elif score>=60:
+    print('D')
+else:
+    print('F')
+##########################################################5
+length_in_cm=eval(input('Enter the Length in centimenter: '))
+length_in_inch=length_in_cm*2.54
+if length_in_cm<0:
+    print('The entry is invalid')
+else:
+    print('The length in inch is:',length_in_inch)
+####################################################################6Miscellaneous Topics I
+count=0
+for i in range(10):
+    num=eval(input('Enter a Number: '))
+    if num>10:
+        count=count+1
+print('There are',count,'numbers greater than 10.')
+######7 Example 2 This modification of the previous example counts how many of the numbers the user
+########enters are greater than 10 and also how many are equal to 0. To count two things we use two count
+########variables.
+count1=0
+count2=0
+for i in range(10):
+    num1=eval(input('Enter the number: '))
+    if num1==0:
+        count1=count1+1
+    elif num1>10:
+        count2=count2+1
+print('There are ',count1,'numbers equal to zero and',count2,'numbers greater than 10')
+############################8  Example 3 Next we have a slightly trickier example. This program counts how many of the
+# squares from 1**2 to 100**2 end in a 4.
+count=0
+for i in range(1,101):
+   if (i**2)%10==4:
+    count=count+1
+print('There are ',count,'squares from 1 to 100 which end in a four')
+############################9 Example 1 This program will add up the numbers from 1 to 100. The way this works is that each
+#time we encounter a new number, we add it to our running total, s.
+sum=0
+for i in range(1,101):
+    sum=sum+i
+print('summuation is ',sum)
+#################################################################################10
+count=0
+for i in range(1,101):
+    count=count+i
+print(count)
+########################11 Example 2 This program that will ask the user for 10 numbers and then computes their average.
+sum=0
+for i in range(10):
+    num=eval(input('Enter the number: '))
+    sum=sum+num
+print('The average of the 10 entered numbers is: ',sum/10)
+#################################################################################12 swapping
+x=eval(input('enter x '))
+hold=x
+y=eval(input('enter y '))
+x=y
+y=hold
+print('The value of x is ',x)
+print('The value of y is ',y)
+################################################################################13
+num=eval(input('Enter the num '))
+flag=0
+for i in range(2,num):
+    if num%i==0:
+        flag=1
+if flag==1:
+      print('Not prime')
+else:
+    print('prime')
+###################################################################################14
+largest=eval(input('Enter the largest number: '))
+for i in range(5):
+    num=eval(input('Enter the positive numbers: '))
+    if num>largest:
+       largest=num
+print('The largest number is: ',largest)
+##################################################################################15
+flag=0
+num=eval(input('Enter the number: '))
+for i in range(2,num):
+    if num%i==0:
+        flag=1
+if flag==1:
+    print('Not prime')
+else:
+    print('prime')
+print(i,flag)
+##################################################################################16
+from random import randint
+count=0
+for i in range(10000):
+    random_int = randint(1, 100)
+    if random_int%12==0:
+        count=count+1
+print('The random number btn 1,100 which is divisible by 12 are: ',count)
+#########17 Write a program that counts how many of the squares of the numbers from 1 to 100 end in a 1
+count=0
+for i in range(1,100):
+    if (i**2)%10==1:
+        count=count+1
+print('program that counts how many of the squares of the numbers from 1 to 100 end in a 1 is: ',count)
+
+#########18 Write a program that counts how many of the squares of the numbers from 1 to 100 end in a
+########4 and how many end in a 9.
+count1=0
+count2=0
+for i in range(1,100):
+    if (i**2)%10==4:
+        count1=count1+1
+    elif (i**2)%10==9:
+        count2=count2+1
+print('The squares that ends in a 4 is:', count1)
+print('The squares that ends in a 9 is:',count2)
+####################################################################19 STRING
+print(len('hello'))
+print('AB'+'CD')
+print('-'*75)
+s=''
+for i in range(10):
+    t=input('Enter a letter: ')
+    if (t=='a' or t=='e' or t=='i' or t=='o' or t=='u'):
+        s=s+t
+    print(s,'')
+################################################################### in operator
+r=input('python for analysis enter a text')
+print('text is',r)
+string='magazijuto'
+if 'a' in string:
+    print('Your string contains the letter a.')
+else:
+    print('Does not contain anything')
+################################################################not in a string
+string=input('Enter the string: ')
+if 'q' not in string:
+    print('q is not in a string')
+else:
+    print('You got it')
+s='python'
+print(s[0])
+print(s[-1])
+w='abcdefghij'
+w[:5]
+print(w[:5])
+print(w[1:7:2])
+for i in range(len(w)):
+    print(w[i])
+#######################################################################
+s='antananarivo'
+for a in s:
+    print('a')
+print('over for now other activities will be held later')
+m='antananarivo'
+print(m.count('a'))
+print(m.index('a'))
+a='hi my friend majulo'
+print(a.replace('hi','hello'))
+a=a.upper()
+print(a)
+#########################################################################
+e=input('enter the string: ')
+if e[0].isalpha():
+    print('Your string starts with a latter')
+if not e.isalpha():
+    print('Your string contains non letter: ')
+s=input('Enter some txt: ')
+for i in range(len(s)):
+    if s[i]=='a':
+        print(i)
+print('\n'*3)
+##########################################################################
+s=input('enter a text: ')
+doubled_s=''
+for c in s:
+    doubled_s=doubled_s+c*2
+print(doubled_s)
+#####################################################################
+s=input('Enter the name Elvis: ')
+for i in range(len(s)):
+        print(s[:i+1],end=' ')
+## triangle
+triangle_s=input('draw a triangle using text: ')
+for i in range(len(triangle_s)):
+    print(triangle_s[:i+1])
+############################################################### LISTS
+l=[0,23,45,56,57,58,59,400,67,68,69,78,79,89,80,90,100]
+print(l)
+print(l[16])
+print(sorted(l),'arranged in ascending order')
+print(len(l))
+if 100 in l:
+    print('The list contains 100')
+else:
+    print('The list does not contain such a number')
+if 0 not in l:
+    print('The list does not contain zeros')
+s=l[0]
+print('the index of l[0] is: ',s)
+for i in range(len(l)):
+    print(i,'=',l[i],'ordered')
+average=sum(l)/len(l)
+print('The average is: ',average)
+d=[0,10,20,30,40,50,32,60,70,80,90,100]
+print(d)
+print(sorted(d))
+############################################################
+from random import randint
+k=[]
+for i in range(50):
+    k.append(randint(1,100))
+print(k)
+############################################################
+from random import randint
+h=[]
+for i in range(30):
+    h=h+[randint(20,200)]
+print(h)
+count=0
+for item in h:
+    if item>50:
+        count=count+1
+print(count)
+for i in range(len(h)):
+    h[i]=h[i]**2
+print(h)
+count=0
+for item in h:
+    if item>5000:
+        count=count+1
+print(count)
+count=0
+for i in range(1,101):
+    count=count+1
+    print(count,'',end='')
+print('over')
+############################# more with lists
+from random import choice
+names=['Joe','Bob','Cat','Malice','Foden']
+player=choice(names)
+print(player)
+from random import sample
+player=sample(names,3)
+print(player)
+###   More with Lists
+from random import choice
+names=['felix','Evodia','Alvin','Aviel','Agneta']
+current_player=choice(names)
+print(current_player)
+##############################################
+from  random import sample
+names=['Alvin','Aviel','Agneta','Andrea','Batista','Felix',]
+player_to_be_picked=sample(names,3)
+print(player_to_be_picked)
+###############################################
+from random import choice
+s='abcdefghijkl\nmnopqrs\ntuvwxyz\n123456789\n@#$%^&*()!~'
+for i in range(100):
+    print(choice(s),end='')
+###################################################
+from random import shuffle
+players=['joe','alu','manoa','chris','lemina','prey','papas','secondary','pipe','pipea']
+shuffle(players)
+for i in players:
+    print(i)
+####################################
+shuffle(players)
+teams=[]
+for i in range(0,len(players),2):
+    teams.append([players[i],players[i+1]])
+print(teams)
+###################SPLIT##############
+a='Hi! this is a test'
+print(a.split())
+##################
+from string import punctuation
+for c in punctuation:
+    a = a.replace(c, '')
+print(a)
+#####################
+from string import punctuation
+q=input('Enter the string ')
+for c in punctuation:
+    q=q.replace(c,'')
+q=q.lower()
+l=q.split()
+print(q)
+print(l)
+word=input('Enter a word: ')
+print(word,'appears',l.count(word),'times.')
+###################################################### List comprehension
+p=[200 for i in range(10)]
+print(p)
+r=[i**2 for i in range(5,28)]
+print(r)
+k=[i+1 for i in range(0,50)]
+print(k)
+########################################################
+from random import randint
+r=[randint(1,100) for i in range(50)]
+print(r)
+r=[i**2 for i in r]
+print(r)
+r=[i for i in r if i<30]
+print(r)
+T=[[1,2,3],
+  [4,5,6],
+  [7,8,9]]
+print(T)
+for r in range(3):
+    for c in range(2):
+        print(T[r][c],end=" ")
+print('over')
+############### WHILE LOOP ########################
+temp=0
+while temp!=-1000:
+    temp=eval(input('enter the value of a tempereture(-1000 to quit: '))
+print('in F is', (9/5)*temp+32)
+######################################################
+temp = 0
+while temp!=-1000:
+    temp = eval(input('Enter a temperature (-1000 to quit): '))
+if temp!=-1000:
+    print('In Fahrenheit that is', 9/5*temp+32)
+else:
+    print('Bye!')
+#############################################################
+from random import randint
+Secret_number=randint(10,20)
+guess=0
+while guess!=Secret_number:
+    guess=eval(input('enter the num to guess: '))
+print('You finally got it')
+#################################################
+temp=0
+while temp != -1000:
+    temp=eval(input('Enter the temp in Celious: '))
+    if temp!=-1000:
+        print('In F is: ',(9/5)*temp+32)
+    else:
+        print('Bye')
+###############################################################
+for i in range(11):
+    print(i)
+print('OVER')
+i=0
+while i<=10:
+   print(i)
+   i = i + 1
+################################################################
+temp = eval(input('Enter a temperature in Celsius: '))
+if temp<-273.15:
+    print('That temperature is not possible.')
+else:
+    print('In Fahrenheit, that is',9/5*temp+32 )
+##############################################################
+temp=eval(input('Enter temperature in Celcious: '))
+while temp<-273.15:
+    temp=eval(input('Impossible. Enter a valid temperature: '))
+print('The valid temperature in Farhenheight is: ',9/5*temp+32)
+######################################################################
+temp = eval(input('Enter a temperature in Celsius: '))
+while temp<-273.15:
+     temp = eval(input('Impossible. Enter a valid temperature: '))
+print('In Fahrenheit, that is', 9/5*temp+32)
+##########################################################################
+#Break statement
+for i in range(10):
+    num=eval(input('Enter the Number: '))
+    if num<0:
+        print('The number you entered will soon spots the program')
+        break
+        print(num)
+##############################################################################
+test=[1,2,3,2,4,5,2,3,4,2,2,2,2,6,7,8,6,5,9,90]
+most_frequent=max(set(test),key=test.count)
+print(most_frequent)
+###########################################################################
+import numpy as np
+import matplotlib.pyplot as plt
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+colors = np.random.rand(N)
+area = np.pi * (15 * np.random.rand(N))**2 # 0 to 15 point radii
+plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+from math import sin
+print(sin(30))
+dict={'Name':'willium','Age':25,'City':'London'}
+print(dict["Name"])
+for key,value in dict.items():
+    print(key,':',value)
+list=[2,4,5,7,3,8,9,60,89,78,56,45,34,9]
+print(list[6:8])
+print(list[12])
+print(sum(list))
+print(max(list))
+print(list)
+k=list
+for i in k:
+ i+1
+ print(i+1)
+######################################################
+josh=[2,4,6,8,10,12,14,16,18,20]
+def inc(x): return x+1
+print(list(map(inc,josh)))
+def swap(x,y):
+    temp=x;
+    x=y;
+    y=temp;
+    return
+x=2
+y=3
+swap(x,y)
+print(x)
+print(y)
+##################################################
+def sum(a,b):
+    print(a+b)
+    return a+b
+def msg():
+    print("Hello")
+    return
+msg()
+sum(10,20)
+############################################################
+def even0dd(x):
+    if(x%2==0):
+        print("even")
+    else:
+        print("0dd")
+    even0dd(2)
+    even0dd(3)
+###########################################################
+x=5
+y=6
+x,y=y,x
+print("The value of x ",x)
+print("The value of y ",y)
+################################################################
+name=input('What is your name? ')
+print('Hi '+ name)
+################################################################
+name=input('What is your name? ')
+colour=input('What is your favourite colour? ')
+print(name + " likes " + colour)
+###################################################################
+birth_year=input('birth_year ')
+age=2021-int(birth_year)
+print("My current age is ", age)
+###################################################################
+user_weight_pound=input('What is your weight in pounds? ')
+user_weight_kg=0.454* float(user_weight_pound)
+print("The weight in kilogram is ",user_weight_kg)
+######################################################################
+first='John'
+last='Smith'
+message= first + ' [' + last + '] is a coder'
+print(message)
+msg=f'{[first]} [{last}] is a coder'
+print(msg)
+#########################################################################
+is_hot=False
+if is_hot:
+    print('It is a hot day')
+    print('Drink a plenty of water')
+else:
+    print('It is a cold day wear a warm clothes')
+print("Enjoy your day")
+##################################################################################
+is_hot=False
+is_cold=False
+if is_hot:
+    print("It is hot day")
+    print("Drink plenty of water")
+elif is_cold:
+    print('It is a cold day')
+    print('Wear a warm clothes')
+else:
+    print('It is a lovely day')
+print("Enjoy your day")
+#####################################################################################
+price=1000000
+has_good_credit=False
+if  has_good_credit:
+    down_payment=0.1*price
+else:
+    down_payment=0.2*price
+print(f"The downpayment is:  ${down_payment}")
+#################################################################################
+has_high_income=True
+good_credit=True
+if has_high_income and good_credit:
+    print("Elligible for Loan")
+###################################################################################
+names_chrs=input("Enter your full name ")
+if len(names_chrs)<3:
+    print('Names must be at least 3 chrs')
+elif len(names_chrs)>50:
+    print('Names must be a maximum of 50 chrs')
+else:
+    print('Names looks good!')
+#####################################################################################
+weight=float(input('Weight: '))
+unit=input('p or kg: ')
+if unit=="p":
+    converted=weight * 0.454
+    print(f"converted to {converted} kg"  )
+else:
+    converted=weight / 0.454
+    print(f"converted to {converted} pound")
+#########################################################################################
+i=0
+while i<=10:
+    print(i)
+    i=i+1
+print('Done')
+#####################################################################################
+i=0
+while i<=10:
+    print("**" * i)
+    i=i+1
+print('Done')
+###########################################################################
+secret_number=9
+guess_count=0
+guess_limit=3
+while guess_count<guess_limit:
+    guess=int(input('guess: '))
+    guess_count= guess_count + 1
+    if guess==secret_number:
+        print("You won! ")
+#######################################################
+secret_number=9
+guess_count=0
+guess_limit=3
+while guess_count<guess_limit:
+    guess=int(input('guess: '))
+    guess_count= guess_count + 1
+    if guess==secret_number:
+        print("You won! ")
+        break
+else:
+    print('Sorry, you failed')
+#############################################################
+command=""
+while command.lower() !='quit':
+    command=input(">")
+    if command.lower()=='start':
+        print("Car started....")
+        break
+    elif command.lower()=="stop":
+        print("Car stopped....")
+        break
+    elif command.lower()=="quit":
+        break
+    elif command.lower()=="help":
+        print(
+        start---To start the Car
+        stop----To stop the Car
+        quit----To quit the Car )
+        break
+    else:
+        print("I dont understand")
+        break
+print(" it is over done")
+###############################################################
+command=""
+started=False
+stopped=False
+assisted=False
+while True:
+    command=input(">").lower()
+    if command=='start':
+        if started:
+            print("hey the car has arleady started")
+        else:
+            started=True
+            print("Car started....")
+    elif command=="stop":
+        if stopped:
+            print("Hey the Car has arleady stopped")
+        else:
+            stopped=True
+            print("Car stopped....")
+    elif command=="quit":
+        break
+    elif command=="help":
+        if assisted:
+            print("Hey you are arleady assisted")
+        else:
+            assisted=True
+            print(
+        start---To start the Car
+        stop----To stop the Car
+        quit----To quit the Car )
+    else:
+        print("I dont understand")
+##############################################################
+prices=[20, 89, 67, 45]
+total=0
+for item in prices:
+    total +=item
+print(f"The sum of items price is: {total} ")
+###############################################################
+for x in range(5):
+    for y in range (2):
+        print(f'({x},{y})')
+####################################################################
+numbers=[5,2,5,2,2]
+for i in numbers:
+    i='X'*i
+    print(i)
+##############################################################
+numbers=[7,4,8,9,6,3]
+for x_count in numbers:
+    output=''
+    for count in range(x_count):
+        output+='x'
+    print(output)
+################################################################
+numbers=[7,4,8,9,6,3]
+for x_count in numbers:
+    output=''
+    for count in range(x_count):
+        output+='x'
+        print(output)
+#################################################################
+names=['Felix','Denis','Alvin','Aviel','Evodia']
+print(names)
+print(names[0:4])
+names[1]='Denilison'
+print(names[0:])
+##############################################################
+numbers=[0,4,6,9,43,65,78,98,786,4536]
+max=numbers[0]
+for i in numbers:
+    if i>max:
+        max=i
+print(max)
+################################################################
+numbers=[0,4,6,9,43,65,65,78,98,786,4536]
+numbers.insert(9,30)
+print(numbers)
+print(numbers.count(65))
+numbers.sort()
+print(numbers)
+numu2=numbers.copy()
+print(numbers.insert(2,100))
+print(numbers)
+print(numu2)
+numbers.reverse()
+print(numbers)
+############################################################################
+numbers=[0,4,6,9,43,65,65,78,98,786,4536]
+num3=[]
+for item in numbers:
+    if item not in num3:
+        num3.append(item)
+print(num3)
+##########################################################################
+customer={
+    "name": "John Smith",
+    "email": 'sonjohn@gmail.com',
+    "Phone ": "0659373",
+    "Contact": "box 34 Songwe",
+    "is_verified": True
+}
+customer["name"]="Jack Snith"
+customer["nick_name"]="BFM_Interprises"
+print(customer["nick_name"])
+print(customer.get("Birthdate","October 15 1985"))
+################################################################################
+phone_number=input("Phoone ")
+digit_mapping={
+"1":"one",
+"2": "Two",
+"3": "Three",
+"4": "Four"
+}
+output=""
+for ch in phone_number:
+    output +=digit_mapping.get(ch,"!")+ " "
+print(output)
+#########################################################################
+message=input(">")
+words=message.split(' ')
+emojies={
+    ":)":" 😊 ",
+    ":(": "😯 "
+}
+output=""
+for word in words:
+   output+= emojies.get(word,word)+ " "
+print(output)
+##########################################################################
+#functions
+def magician_endeed(first_name, last_name):
+    print(f"{first_name},{last_name} don't messup with magicians")
+    print(f" love that idea of professional experience {last_name}")
+magician_endeed("Felix", "Mbogolela")
+###########################################################################
+def square (number):
+    print( number*number)
+square(20)
+########################################################################
+class Point:
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+
+point1=Point()
+point1.move()
+point1.x=10
+point1.y=20
+print(point1.x,point1.y)
+###################################################################
+#Constructors
+class Point():
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+
+
+point1=Point(10,20)
+point1.x=11
+point2=Point(200,1000)
+print(point2.y,point2.x)
+print(point1.x)
+##############################################################################
+class Person:
+    def __init__(self,name): #Constructors
+        self.name=name
+    def talk(self):
+        print(f"Hi! Iam {self.name}")
+
+
+person=Person("Felix Benjamin")
+#print(person.name)
+person.talk()
+bob=Person("Bob Smith")
+bob.talk()
+########################################################################################
+#Inheritance
+class Mammal:
+    def walk(self):
+        print("walk")
+
+
+class Dog(Mammal):
+    def barking(self):
+        print("barking")
+class Cat(Mammal):
+        pass
+dog1=Dog()
+dog1.barking()
+##################################################################################
+#MODULES NEW FILE
+def lbs_to_kg(weight):
+    return weight * 0.45
+
+
+def kg_to_lbs(weight):
+    return weight / 0.45
+
+#another file by calling
+import converters
+from converters import lbs_to_kg
+print(lbs_to_kg(200))
+weight1=converters.lbs_to_kg(100)
+weight2=converters.kg_to_lbs(70)
+print(weight2)
+print(weight1)
+########################################################################
+#Organization of code in modules to find_max
+def find_max(numbers):
+    max=numbers[0]
+    for number in numbers:
+        if number>max:
+            max=number
+    return max
+
+import maximum_number
+numbers=[2,5,7,67,89,34,65,78,100]
+max_no=maximum_number.find_max(numbers)
+print(max_no)
+#########################################################################
+import random
+
+
+class Dice:
+    def roll(self):
+        first=random.randint(1,6)
+        second=random.randint(1,6)
+        return first,second
+
+
+dice1=Dice()
+print(dice1.roll())
+##############################################################################
+import random
+for i in range(10):
+    print(random.randint(10,50))
+##############################################################
+import random
+
+
+class Members:
+    def leader(self):
+        names=random.choice(["Joe","Mosh","Masha","Felix","Alvin","Aviel","Evodia"])
+        return names
+leader1=Members()
+print(leader1.leader())
+#######################################################################
+#PACKAGES-is another way to organize our code or is a container for multiple models
+import ecommerce.shipping
+ecommerce.shipping.calc_shipping()
+##############################################################
+#Generating Random values
+import random
+for i in range(10):
+    print(random.random())
+    print(random.randint(10,50))
+#######################################################
+from pathlib import Path
+path=Path()
+for file in path.glob('*.py'):
+    print(file)
+##################################################
+#pypi and pip(Huh?)
+import openpyxl as xl
+from openpyxl.chart import BarChart,Reference
+
+wb=xl.load_workbook("price_index.xlsx")
+sheet=wb['price_index']
+cell=sheet['a1']
+cell=sheet.cell(1,1)
+#print(sheet.max_row)
+for row in range(2,sheet.max_row + 1):
+    cell=sheet.cell(row,3)
+    #print(cell.value)
+    corrected_price=cell.value * 0.9
+    corrected_price_cell=sheet.cell(row,4)
+    corrected_price_cell.value=corrected_price
+values=Reference(sheet,min_row=2,max_row=sheet.max_row,min_col=4,max_col=4)
+chart=BarChart()
+chart.add_data(values)
+sheet.add_chart(chart,'e2')
+wb.save('price_index1.xlsx')
+#################################################################################################
+import openpyxl as xl
+from openpyxl.chart import BarChart,Reference
+
+
+def process_workbook(filename):
+    wb = xl.load_workbook(filename)
+    sheet = wb[filename]
+    for row in range(2, sheet.max_row + 1):
+        cell = sheet.cell(row, 3)
+        # print(cell.value)
+        corrected_price = cell.value * 0.9
+        corrected_price_cell = sheet.cell(row, 4)
+        corrected_price_cell.value = corrected_price
+    values = Reference(sheet, min_row=2, max_row=sheet.max_row, min_col=4, max_col=4)
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart, 'e2')
+    wb.save(filename)"""
+###########################################################################################
+from random import randint
+num=randint(1,20)
+guess=eval(input('Enter a guessing number: '))
+if guess==num:
+    print('Yes you got it!!!!')
+else:
+    print('Wrong!! Try it later, the guessing number was', num)
